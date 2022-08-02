@@ -75,12 +75,10 @@ const getAllBooksHandler = (request, h) => {
   let filteredBooks = books;
 
   if (reading !== undefined) {
-    // const readingStatus = reading === 0 ? false : true;
     filteredBooks = filteredBooks.filter((book) => book.reading === (reading === '1'));
   }
 
   if (finished !== undefined) {
-    // const finishedStatus = finished === 0 ? false : true;
     filteredBooks = filteredBooks.filter((book) => book.finished === (finished === '1'));
   }
 
